@@ -11,10 +11,14 @@ switch ($operacion) {
         break;
     case 'multiplicacion':
         $total = $numero1 * $numero2;
-        
         break;
     case 'division':
-        $total = $numero1 / $numero2;
+        if ($numero1 == 0 || $numero2 == 0) {
+            $total = "no se puede dividir por cero";
+        }else {
+            $total = $numero1 / $numero2;    
+        }
+        
         break;
     default:
         $total = "no valido";
